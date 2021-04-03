@@ -20,8 +20,9 @@ public class Dennis extends child implements Person {
     private String name;
     private int pies;
     private static int numOfMis = 5;
+    private String pets;
 
-    public Dennis(int age, String gender, int strikes, String nickname, int strength, int health, String name, int pies) {
+    public Dennis(int age, String gender, int strikes, String nickname, int strength, int health, String name, int pies,String pets) {
         this.age = age;
         this.gender = gender;
         this.strikes = strikes;
@@ -88,9 +89,9 @@ public class Dennis extends child implements Person {
     }
     
     
-    @Override
-    public void pickItem() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
+    public void pickItem(Item theItem) {
+        System.out.println("you have picked up the item" );
     }
 
     /**
@@ -109,6 +110,10 @@ public class Dennis extends child implements Person {
         System.out.println("you lose");
     }
     
+    @Override
+    /**
+     * used in congjustion with the lose methord as well as a methord from a adult for example if a police officer as to caputre the player it would run their methoreds as well as this methord to tell the user that the game is over.
+     */
     public void caught(){
         lose();
     }
@@ -116,7 +121,7 @@ public class Dennis extends child implements Person {
 
     @Override
     public void stealItem() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+     
     }
 
     public void playPrank(Person theEn) {
@@ -130,11 +135,17 @@ public class Dennis extends child implements Person {
     }
 
     @Override
+    /**
+     * increases the strikes for the player. this is a slightly diffrent way of the health as health is only reduced if the player is attacked while strikes are only given when the player is caught by an adult or fails a prank.
+     */
     public void increaseStrikes() {
         this.strikes++;
     }
 
     @Override
+    /**
+     * a stronger form to play a prank 5 strikes are added however due to it being more powerfull if the player number of mis is less than 0 it will not allow the user to run the methord.
+     */
     public void makeMischief(Person theEn) {
         if(numOfMis< 0){
             theEn.increaseStrikes();

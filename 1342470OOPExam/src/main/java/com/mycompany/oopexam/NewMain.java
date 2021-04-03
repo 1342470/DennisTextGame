@@ -18,12 +18,6 @@ public class NewMain {
      */
     public static void main(String[] args) {
         chapter1();
-
-     
-
-
-     
-
     }
     
     private static void explainInfo(){
@@ -33,7 +27,7 @@ public class NewMain {
 
     
     private static void chapter1(){
-        Dennis DennisM = new Dennis(10,"Male",0,"Dennis the menis",5,100,"Dennis",0);
+        Dennis DennisM = new Dennis(10,"Male",0,"Dennis the menis",5,100,"Dennis",0,"Gnasher");
         DennisM.losecon();
         treehouse DennisTreehouse = new treehouse(10,"Dennis's backgarden");
         explainInfo();
@@ -46,9 +40,12 @@ public class NewMain {
         
         if(responce.equals("go to shops")){
             goToShops();
+        }else if (responce.equals("make mischeif")){
+            System.out.println("their currently isn't anyone near by");
+            chapter1();
         }
-            else if(responce == "pick up pie"){
-                if(DennisTreehouse.pies < 0){ 
+            else if(responce.equals("pick up pie")){
+                if(DennisTreehouse.pies !=0){ 
                     DennisM.addPie();
                     DennisTreehouse.setitem();                
                     System.out.println("you grab at pie you now have " + DennisM.getPies());
@@ -73,35 +70,51 @@ public class NewMain {
 
     
     private static void goToShops(){
-        Dennis DennisM = new Dennis(10,"Male",0,"Dennis the menis",5,100,"Dennis",0);
+        Dennis DennisM = new Dennis(10,"Male",0,"Dennis the menis",5,100,"Dennis",0,"Gnasher");
         DennisM.losecon();
-        Peter Peterm = new Peter(34,"Male",1,"peter pie-face",5,100,"Peter shepherd");
+        Slipper SlipperS = new Slipper(34,"Male",1,"peter pie-face",5,100,"Peter shepherd");
         Shops localShops = new Shops(10,"local shops near Dennis house");
         localShops.ExplainLocation();
-        System.out.println("Chapter 2 Shocking shops");
+        System.out.println("once at the shops see that next to the saugage shop their the one of the worse villans to plage the land, the one and only Pie face across from Pie face is the walkway to the park as as as a shortcut made by yours truely to get bash street School.");
          Scanner input1 = new Scanner(System.in);
         System.out.println("please type in what you would like to do next");
         String responce = input1.nextLine();
         if(responce.equals("shoot sling at pie face")){
-            DennisM.shootSling(Peterm);
-            Peterm.specialistMove(DennisM);
+            DennisM.shootSling(SlipperS);
+            SlipperS.specialistMove(DennisM);
             Scanner playAgain = new Scanner(System.in);
             System.out.println("Would you like to play again?");
             String playAgainInput = input1.nextLine();
                 if(playAgainInput.equals("yes")){
                 chapter1();
-                }else {System.out.println("Thank you for playing goodbye");            
-            
-                }
-        }
-            else if(responce == "pick pie"){
-                
-                System.out.println("you grab at pie you now have "  );
+                }else {System.out.println("Thank you for playing goodbye");}
+                    }else if(responce.equals("go to the park")){
+                        System.out.println("you deside you to the park");
+                        gotopark();
+                    }else if(responce == "go to the Bash Street School"){
+                        System.out.println("for some strange reason you diside to go to school, well I guess you could get some tips on where pie face is");
+                        gotoBashStreetSchool();    
                     }else{
                 System.out.println("unknown action");
                 goToShops();
                     
                     };
             
+        }
+    
+        private static void gotopark(){
+        Dennis DennisM = new Dennis(10,"Male",0,"Dennis the menis",5,100,"Dennis",0,"Gnasher");
+        DennisM.losecon();
+
+        
+        }
+        
+        private static void gotoBashStreetSchool(){
+        }
+        
+        
+        
+        private static void chapter2(){
+        
         }
     }    

@@ -9,13 +9,11 @@ package com.mycompany.oopexam;
  *
  * @author kylej
  */
-abstract class Adult {
+abstract class Item {
     
-    public abstract void detain(Person theTroubleMaker);
+    public abstract void pickup(Person theOwner);
 
-    
-
-    public abstract void specialistMove(Person theTroubleMaker);
+    public abstract void useitem(Person theOwner);
     
             
 }
