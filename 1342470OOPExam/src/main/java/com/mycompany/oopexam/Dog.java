@@ -9,13 +9,7 @@ package com.mycompany.oopexam;
  *
  * @author kylej
  */
-abstract class Adult {
+abstract class Dog {
     
-    public abstract void detain(Person theTroubleMaker);
-
-    
-
-    public abstract void specialistMove(Person theTroubleMaker);
-    
-            
+    public abstract void bite(Person thebiten);   
 }

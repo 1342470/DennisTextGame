@@ -14,9 +14,7 @@ public interface Person {
 public int getStrikes();
 
 public void increaseStrikes();
-    
-public void pickItem();
-
+   
 public String getName();
 
 public int decreasehealth();
