@@ -9,14 +9,11 @@ package com.mycompany.oopexam;
  *
  * @author kylej
  */
-public interface location {
+abstract class Item {
     
-    public int getitem();
+    public abstract void pickup(Person theOwner);
 
-    public void setitem();
+    public abstract void useitem(Person theOwner);
     
-    public String getLocation();
-    
-    public void ExplainLocation();
-   
+            
 }

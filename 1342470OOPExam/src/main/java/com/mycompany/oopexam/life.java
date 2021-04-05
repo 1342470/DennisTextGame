@@ -7,16 +7,14 @@ package com.mycompany.oopexam;
 
 /**
  *
- * @author kylej
+ * @author kylej 
+ * 
+ * life interface used by any and all chartures in the game the most basic methods that call objects should be able to access are the eat and move methords.
  */
-public interface location {
+public interface life {
     
-    public int getitem();
-
-    public void setitem();
+    public void eat();
     
-    public String getLocation();
+    public void move();
     
-    public void ExplainLocation();
-   
 }
