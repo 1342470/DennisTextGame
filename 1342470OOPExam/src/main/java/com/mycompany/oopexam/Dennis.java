@@ -9,28 +9,26 @@ package com.mycompany.oopexam;
  *
  * @author kylej
  */
-public class Dennis extends child implements Person,life {
+public class Dennis extends child implements Person {
 
     private int age;
     private String gender;
-    private static int strikes;
+    public int strikes;
     private String nickname;
     private int strength;
-    private static int health;
-    private final String name;
+    private int health;
+    private String name;
     private int pies;
-    private static final int numOfMis = 5;
-    private String pets;
+    private static int numOfMis = 5;
 
     public Dennis(int age, String gender, int strikes, String nickname, int strength, int health, String name, int pies) {
         this.age = age;
         this.gender = gender;
-        Dennis.strikes = strikes;
+        this.strikes = strikes;
         this.nickname = nickname;
         this.strength = strength;
-        Dennis.health = health;
+        this.health = health;
         this.name = name;
-        this.pets = "Gnasher" + "Joe" + "Rasher";
     }
 
     
@@ -57,10 +55,6 @@ public class Dennis extends child implements Person,life {
         this.age = age;
     }
 
-    public void setStrikes(int numst) {
-        Dennis.strikes = numst;
-    }
-
     public String getGender() {
         return gender;
     }
@@ -85,25 +79,18 @@ public class Dennis extends child implements Person,life {
         this.strength = strength;
     }
 
-    public int setHealth(int health) {
-        this.health = health;
-        return health;
-    }
-    
-    
-
     /**
      * losecon 
      * sets the losing conditional so that if dennis's number of strikes goes to 10 or above to then print out to the user that they have lost.
      */
     public void losecon(){
-        while (Dennis.strikes >= 10)if(Dennis.strikes == 10 ){System.out.println("You lose");}
+        while (this.strikes >= 10)if(this.strikes == 10 ){System.out.println("You lose");}
     }
     
     
-
-    public void pickItem(Item theItem) {
-        System.out.println("you have picked up the item" );
+    @Override
+    public void pickItem() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     /**
@@ -118,29 +105,20 @@ public class Dennis extends child implements Person,life {
         System.out.println("you shoot the slingshot hitting " + theEn.getName() + " the impact leaves them with " + theEn.gethealth()+ "enery left ");
     }
 
-    public static void loseGame(){
+    public void lose(){
         System.out.println("you lose");
     }
     
-    @Override
-    /**
-     * used in congjustion with the lose methord as well as a methord from a adult for example if a police officer as to caputre the player it would run their methoreds as well as this methord to tell the user that the game is over.
-     */
     public void caught(){
-        loseGame();
+        lose();
     }
 
 
     @Override
     public void stealItem() {
-     
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    /**
-     * works like a attack system in an RPG 
-     * @param theEn takes the target that the player will being attacking.
-     * once prank the output of the result of the prank will be displayed
-     */
     public void playPrank(Person theEn) {
         theEn.increaseStrikes();
         System.out.println( this.getName() +  "has played a prank on " + theEn.getName() + " the shock renders them with " + theEn.getStrikes() + "stamina left" );
@@ -152,17 +130,11 @@ public class Dennis extends child implements Person,life {
     }
 
     @Override
-    /**
-     * increases the strikes for the player. this is a slightly diffrent way of the health as health is only reduced if the player is attacked while strikes are only given when the player is caught by an adult or fails a prank.
-     */
     public void increaseStrikes() {
         this.strikes++;
     }
 
     @Override
-    /**
-     * a stronger form to play a prank 5 strikes are added however due to it being more powerful if the player number of mis is less than 0 it will not allow the user to run the methord.
-     */
     public void makeMischief(Person theEn) {
         if(numOfMis< 0){
             theEn.increaseStrikes();
@@ -173,6 +145,10 @@ public class Dennis extends child implements Person,life {
         System.out.println( this.getName() +  "has played a prank on " + theEn.getName() + " the shock renders them with " + theEn.getStrikes() + "stamina left" );
         } else{System.out.println("you have ran out of idea's for mischief");}
     }
+
+    public int health(){
+        return health;
+}
 
     @Override
     public int decreasehealth() {
@@ -185,12 +161,13 @@ public class Dennis extends child implements Person,life {
         return health;
     }
 
-    
-    public void showSrikes() {
+    public int showSrikes() {
         System.out.println(strikes); 
-    
-    }  
-    
+        return strikes;
+       
+        
+ 
+}  
     /**
      * if the number of charters pies is greater than 0 it will add one stike to the targe and output the user the result of the hit
      * @param theEn target of thrown item
@@ -205,22 +182,6 @@ public class Dennis extends child implements Person,life {
         else
             System.out.println("You can't throw a pie if you don't have any silly");
         return pies;
-    }
-
-    @Override
-    public int increasehelath() {
-        return this.health++;
-    }
-
-    @Override
-    public void eat() {
-        this.health+=10;
-        System.out.println("Yumm" + this.getName() + "enjoys eating thier food and now has " + this.gethealth() + "heatlh");
-    }
-
-    @Override
-    public void move() {
-        
     }
     
     

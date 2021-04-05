@@ -13,9 +13,7 @@ abstract class Adult {
     
     public abstract void detain(Person theTroubleMaker);
 
-    
-
-    public abstract void specialistMove(Person theTroubleMaker);
+    public abstract void specialistMove();
     
             
 }

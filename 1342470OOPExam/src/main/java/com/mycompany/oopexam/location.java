@@ -19,4 +19,5 @@ public interface location {
     
     public void ExplainLocation();
    
+    public void changeLocation(String locaiton);
 }
