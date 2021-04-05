@@ -11,10 +11,20 @@ package com.mycompany.oopexam;
  */
 public interface Animal {
     
-public void bite();
+public void AnimalAblility(Person theTarget);
 
 public void makeNoise();
 
+public String getName();
 
-    
+public void increaseHealth();
+
+public int getHealth();
+
+public int decreasehealth();
+
+public int gethealth();
+
 }
+    
+

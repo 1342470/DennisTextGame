@@ -9,14 +9,8 @@ package com.mycompany.oopexam;
  *
  * @author kylej
  */
-public interface location {
+abstract class Pig {
     
-    public int getitem();
-
-    public void setitem();
+    public void oink(){System.out.println("Oink Oink");}
     
-    public String getLocation();
-    
-    public void ExplainLocation();
-   
 }

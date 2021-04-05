@@ -9,14 +9,7 @@ package com.mycompany.oopexam;
  *
  * @author kylej
  */
-public interface location {
+abstract class Dog {
     
-    public int getitem();
-
-    public void setitem();
-    
-    public String getLocation();
-    
-    public void ExplainLocation();
-   
+    public abstract void bite(Person thebiten);   
 }

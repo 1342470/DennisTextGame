@@ -9,14 +9,10 @@ package com.mycompany.oopexam;
  *
  * @author kylej
  */
-public interface location {
+abstract class Bird {
     
-    public int getitem();
-
-    public void setitem();
     
-    public String getLocation();
-    
-    public void ExplainLocation();
-   
+    public void fly(){System.out.println("your Bird flys up into sky apon scanning the sky it seems like you can go somewhere else");
+        
+    };
 }
