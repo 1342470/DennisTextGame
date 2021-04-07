@@ -13,48 +13,56 @@ public class MI13SceretServiceHeadquarters implements location{
     private final int Sausages;
     private String location;
 
-
+    /**
+     *
+     * @param Sausages defines the number of saughages ih locaiton 
+     * @param location defines location if more than one is created
+     */
     public MI13SceretServiceHeadquarters(int Sausages, String location) {
         this.Sausages = Sausages;
         this.location = location;
     }
 
-
-    
-
-    
+    /**
+     *getter for item
+     * @return value of sausages
+     */
     @Override
     public int getitem() {
         return Sausages;
     }
 
+    /**
+     *setter for saugages
+     */
     @Override
     public void setitem() {
         
     }
     
-    public void useCatapult(Person theEn){
-        theEn.decreasehealth();
-        System.out.println("you shoot the slingshot hitting " + theEn.getName() + " the impact leaves them with " + theEn.gethealth()+ "enery left ");
-    }
 
+    /**
+     *getter for location 
+     * @return value of location
+     */
     @Override
     public String getLocation() {
         return location;
     }
 
- 
-
+    /**
+     *prints out discription of locaiton 
+     */
     @Override
     public void ExplainLocation() {
-        System.out.println("You are currently at the park around you are are stakeboards.");
+        System.out.println("You finally at the end the after finding the location of walter you see a long corrdoor that leads to a door.");
     }
 
-    
-    public static void goToLivingRoom(){
-        Sandra SandraM = new Sandra(34,"Female",1,"test",5,100,"test");
-        Dennis DennisM = new Dennis(10,"Male",0,"Dennis the menis",5,100,"Dennis",0);
-
+    /**
+     *story methord used by the main
+     */
+    public static void goToMI13(){
+        System.out.println("You finally at the end the after finding the location of walter you see a long corrdoor that leads to a door.");
         
         }
 

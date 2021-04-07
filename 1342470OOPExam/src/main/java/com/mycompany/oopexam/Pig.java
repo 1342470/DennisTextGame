@@ -8,8 +8,10 @@ package com.mycompany.oopexam;
 /**
  *
  * @author kylej
+ * defines what the pig is allowed to do.
  */
 abstract class Pig {
+    
     
     public void oink(){System.out.println("Oink Oink");}
     

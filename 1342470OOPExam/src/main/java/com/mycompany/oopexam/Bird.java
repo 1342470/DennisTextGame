@@ -8,6 +8,7 @@ package com.mycompany.oopexam;
 /**
  *
  * @author kylej
+ * bird class that defines the actions only a bird can do
  */
 abstract class Bird {
     

@@ -8,6 +8,7 @@ package com.mycompany.oopexam;
 /**
  *
  * @author kylej
+ * defines that methods item can use
  */
 abstract class Item {
     

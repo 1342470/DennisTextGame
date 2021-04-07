@@ -8,6 +8,7 @@ package com.mycompany.oopexam;
 /**
  *
  * @author kylej
+ * defines the required methods for any robots
  */
 public interface Robot {
     

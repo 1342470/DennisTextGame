@@ -6,12 +6,14 @@
 package com.mycompany.oopexam;
 
 /**
- *
+ * interface for person that defines various methords.
  * @author kylej
  */
 public interface Person {
 
 public int getStrikes();
+
+public void setStrikes(int newstrikes);
 
 public void increaseStrikes();
    
@@ -19,9 +21,9 @@ public String getName();
 
 public int decreasehealth();
 
-public int increasehelath();
+public int increaseHealth();
 
-public int gethealth();
+public int getHealth();
 
 public void caught();
 

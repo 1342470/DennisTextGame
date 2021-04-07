@@ -8,6 +8,7 @@ package com.mycompany.oopexam;
 /**
  *
  * @author kylej
+ * defines methords of location
  */
 public interface location {
     

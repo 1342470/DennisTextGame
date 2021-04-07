@@ -8,6 +8,7 @@ package com.mycompany.oopexam;
 /**
  *
  * @author kylej
+ * sets methods that only the child can use
  */
 abstract class child {
     
@@ -18,4 +19,10 @@ abstract class child {
     public abstract void makeMischief(Person theEn);
     
     public abstract void stealItem();
+    
+    public abstract void increasePies();
+    
+    public abstract void decreasePies();
+    
+    public abstract int getPies();
 }
